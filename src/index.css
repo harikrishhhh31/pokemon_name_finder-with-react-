@@ -1,0 +1,95 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesize: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #ffcc00;
+  --secondary-color: #3b4cca;
+  --danger-color: #ff0000;
+  --success-color: #4caf50;
+  --bg-color: #1a1a2e;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #4a1c40);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #4a5dff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 76, 202, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
